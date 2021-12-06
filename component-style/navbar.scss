@@ -1,0 +1,31 @@
+@use "global" as global;
+
+
+.heading__logo {
+  margin: 1.2rem global.$spacing-2 0;
+}
+
+.nav__links-wrapper {
+  width: max-content;
+}
+
+.nav__ul {
+    @include global.reset();
+  > .nav__items {
+    list-style-type: none;
+    margin: 0 global.$spacing-5 * 2;
+  }
+}
+
+.nav__items {
+  > .nav__link {
+    @include global.a_link($weight: global.$fw_600);
+    border-radius: 10px;
+    padding: global.$spacing-2 global.$spacing-5;
+
+    &:hover{
+      transition: all .4s;
+      color: global.$primary-color;
+    }
+  }
+}

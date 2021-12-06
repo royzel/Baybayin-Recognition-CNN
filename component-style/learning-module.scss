@@ -1,0 +1,59 @@
+@use "global" as global;
+
+@mixin line {
+  background-color: global.$primary-color;
+  content: "";
+  height: 3px;
+  margin: 0 global.$spacing-5;
+  width: 100%;
+}
+
+.learning__module-section {
+  margin: global.$spacing-5 * 10 auto;
+}
+
+.baybayin__def-wrapper {
+  > .baybayin__def-par {
+    line-height: global.$spacing-5 * 2;
+    margin: global.$spacing-5 * 3 auto;
+    text-align: justify;
+  }
+}
+
+.baybayin__def-image-wrapper {
+  > .baybayin__def-image {
+    object-fit: scale-down;
+    width: 100%;
+  }
+  > .baybayin__def-image-l2 {
+    object-fit: scale-down;
+  }
+}
+
+.learning__module-heading {
+  color: global.$primary-color;
+  display: flex;
+  font-weight: global.$fw_700;
+  align-items: center;
+
+  &.right::after {
+    @include line();
+  }
+  &.left::before {
+    @include line();
+  }
+}
+
+.remember__section {
+  background-color: global.$secondary-color;
+  border-radius: global.$spacing-5 * 2;
+  margin: global.$spacing-5 * 5 auto;
+  padding: global.$spacing-5 * 5;
+}
+
+.next__page-btn-wrapper {
+  margin: global.$spacing-5 * 6 auto;
+  > .next__page {
+    @include global.primary__a-link();
+  }
+}

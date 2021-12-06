@@ -1,0 +1,97 @@
+@use "global" as global;
+
+.banner__hero-1 {
+  margin: global.$spacing-5 * 5 0;
+  padding: 0 global.$spacing-5 * 6;
+}
+
+
+.practice__try-it {
+  position: relative;
+  > .circle__vector {
+    @include global.asset_position($top: -1rem, $left: -2.5rem);
+    position: absolute;
+  }
+  > .try__it-now {
+    padding: global.$spacing-5;
+    @include global.primary__a-link;
+  }
+}
+
+.hand__gestures-wrapper {
+  position: relative;
+  width: max-content;
+  > .hand__gestures {
+    position: absolute;
+    &:nth-child(1) {
+      @include global.asset_position($top: -22rem, $left: -4rem);
+      width: max-content;
+    }
+    &:nth-child(2) {
+      @include global.asset_position($top: 2rem, $right: -52rem, $left: none);
+      width: max-content;
+    }
+    &:nth-child(3) {
+      @include global.asset_position($top: -1rem, $left: -14.5rem);
+      width: max-content;
+    }
+  }
+}
+
+.banner__hero-2 {
+  &:nth-child(1n) {
+    margin: global.$spacing-5 * 8 0;
+  }
+  &:nth-child(2n) {
+    margin: global.$spacing-5 * 8 0 0;
+  }
+  &:nth-child(3n) {
+    margin: global.$spacing-5 * 23 0 0;
+  }
+  > .banner__image {
+    width: 100%;
+  }
+}
+.banner__image {
+  > .banner__2-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+// banner 3
+.learn__more-link {
+  margin: global.$spacing-5 * 8 0;
+  width: 100%;
+}
+.card__link-wrapper {
+  margin: global.$spacing-5;
+  .card__link {
+    background-color: global.$primary-color;
+    border-radius: global.$spacing-5 * 3;
+    color: global.$white;
+    margin: global.$spacing-5;
+    padding: global.$spacing-5 * 2 global.$spacing-5 * 4;
+    width: 90%;
+  }
+  > .card__item-link {
+    @include global.secondary__a-link();
+    border-radius: global.$spacing-3;
+    padding: global.$spacing-2 global.$spacing-5 * 2;
+  }
+}
+
+// Footer
+.main__footer {
+  background-color: global.$primary-color;
+  color: global.$white;
+  padding: global.$spacing-5 * 2;
+}
+
+// MEDIA SCREEN
+@mixin landing-page-below-64rem {
+  .learn__more-link {
+    flex-direction: column;
+  }
+}

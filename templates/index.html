@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Let's Learn Baybayin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css' )}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='new-css/animate.css' )}}">
+    <title>Baybayin</title>
+  </head>
+
+  <body>
+    <!-- Modal -->
+    <div class="modal fade" id="contactForm" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"
+      data-bs-keyboard="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Reached Us!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+              <label for="emailInput">Email&nbsp;Address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="subjectInput" placeholder="Your subject message">
+              <label for="subjectInput">Subject</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                style="height: 100px;"></textarea>
+              <label for="floatingTextarea" style="white-space: nowrap;">Leave a message</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-success" data-bs-dismiss="modal">Submit Request</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header nav -->
+    <div class="container">
+      <header class="my-5">
+        <nav class="__navbar">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="navbar__logo-wrapper d-flex align-items-center">
+              <img class="baybayin__logo d-inline" alt="Baybayin Logo">
+              <h3 class="fw_900 heading__logo mx-2">BaybayAtin</h3>
+            </div>
+            <div class="nav__links-wrapper">
+              <ul class="nav__ul d-lg-flex align-items-center justify-content-between">
+                <li class="nav__items">
+                  <a class="nav__link" href= "/">Home</a>
+                </li>
+                <li class="nav__items">
+                  <a class="nav__link" href="#">About</a>
+                </li>
+                <li class="nav__items">
+                  <a class="nav__link" role="button" href="#" data-bs-toggle="modal"
+                    data-bs-target="#contactForm" data-name-jr="John Royce" >Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- section try it now -->
+      <div class="banner__hero-1 d-lg-flex align-items-center">
+        <div class="practice__try-it z-index">
+          <img class="circle__vector z-index-5">
+          <h1 class="fw_600 my-4"><span class="prim__color  display-1 fw_900  d-block">Practice</span>
+            <span class="fw_600  d-block">Tracing Baybayin</span>
+            <span class="fw_600 let__spacing d-block">Baybayin Script.</span>
+
+          </h1>
+          <p class="display-7 mt-4 mb-5">Kilalanin at baybayin ng sariling atin</span></p>
+          <a class="try__it-now" href= "/drawing" >Try it now</a>
+        </div>
+        <div class="hand__gestures-wrapper">
+          <img class="hand__gestures floatingOne">
+          <img class="hand__gestures floatingTwo"  >
+          <img class="hand__gestures floatingThree">
+        </div>
+      </div>
+      <!-- what is baybayatin -->
+      <div class="banner__hero-2 d-lg-flex align-items-center justify-content-between">
+        <section class="what__is-baybayin w-100">
+          <h1 class="prim__color fw_700">What is <span class="fw_900 d-block display-4">BaybayAtin</span></h1>
+          <p class="fw_600 my-4 let__spacing">BaybayAtin is an web application <br> made using HTML5, CSS, Javascript,
+            <br> and Image Processing using Python <br> with Tensorflow and Keras. It is to <br> provide a tool that
+            will help Filipinos <br> to have an understanding and <br> knowledge about the Philippine <br> Ancient
+            Script, Baybayin.
+          </p>
+        </section>
+        <section class="banner__image">
+          <img class="banner__2-image">
+        </section>
+      </div>
+      <!-- who we are -->
+      <div class="banner__hero-2 d-lg-flex align-items-center justify-content-between">
+        <section class="banner__image">
+          <img class="banner__2-image">
+        </section>
+        <section class="who__we-are w-100">
+          <h1 class="prim__color fw_700 text-lg-end">Who<span class="fw_900 d-block display-4">We Are</span></h1>
+          <p class="fw_600 my-4 let__spacing text-lg-end">
+            We, <span class="fw_700">John Royce Evangelista</span>, <span class="fw_700">Liezel <br>
+              Malaborbor</span>,
+            <span class="fw_700">and Chantal Pandiño,</span> are <br> Bachelor of Science in Computer Science <br>
+            students at Laguna State Polytechnic <br> University's San Pablo City Campus. We are <br> currently
+            completing an undergraduate thesis titled "The Development of the <br> "BaybayAtin E-learning Website"
+            Using
+            <br> Pattern Recognition."
+          </p>
+        </section>
+      </div>
+      <!-- Our goal -->
+      <div class="banner__hero-2 d-lg-flex align-items-center justify-content-between">
+        <section class="what__is-baybayin w-100">
+          <h1 class="prim__color fw_700">Our <span class="fw_900 d-block display-4">Goal</span></h1>
+          <p class="fw_600 my-4 let__spacing">To provide more information about <br> Baybayin to students and anybody
+            else
+            who <br> is interested, to be able to research in a more convenient and accessible manner <br> and to
+            create
+            a <br>
+            well-informed website that <br> can aid in the understanding, learning, <br> reading, and writing of
+            Baybayin
+          </p>
+        </section>
+        <section class="banner__image">
+          <img class="banner__2-image">
+        </section>
+      </div>
+      <!-- Learn more link -->
+      <div class="banner__hero-3 my-5">
+
+        <section class="learn__more my-4">
+          <h1 class="heading__learn text-center fw_700">Learn more about baybayin</h1>
+        </section>
+
+        <section class="learn__more-link d-flex  align-items-center justify-content-center">
+          <div class="card__link-wrapper d-flex align-items-center justify-content-center flex-column">
+            <div class="card__link d-flex align-items-center justify-content-center flex-column">
+              <img class="card__link-icon my-3">
+              <h3 class="fw_700 text-center my-3">Learning <br> Module</h3>
+              <p class="text-center f_size-4 my-3">Learn how to <br> read and write <br> Baybayin Script </p>
+            </div>
+            <a class="card__item-link" href="/learning-module.html">Proceed</a>
+          </div>
+
+          <div class="card__link-wrapper d-flex align-items-center justify-content-center flex-column">
+            <div class="card__link d-flex align-items-center justify-content-center flex-column">
+              <img class="card__link-icon my-3">
+              <h3 class="fw_700 text-center my-3">Script <br>Tracing</h3>
+              <p class="text-center f_size-4 my-3">Practice how to write <br> Baybayin script <br> by tracing</p>
+            </div>
+            <a class="card__item-link" href="./templates/index.html">>Let's Go</a>
+          </div>
+          <div class="card__link-wrapper d-flex align-items-center justify-content-center flex-column">
+            <div class="card__link d-flex align-items-center justify-content-center flex-column">
+              <img class="card__link-icon my-3">
+              <h3 class="fw_700 text-center my-3">Character <br> Translator</h3>
+              <p class="text-center f_size-4 my-3">Translate English Letters<br>to Baybayin Characters </p>
+            </div>
+            <a class="card__item-link" href="/translator">Translate</a>
+          </div>
+          <div class="card__link-wrapper d-flex align-items-center justify-content-center flex-column">
+            <div class="card__link d-flex align-items-center justify-content-center flex-column">
+              <img class="card__link-icon my-3">
+              <h3 class="fw_700 text-center my-3">Download <br> Worksheets</h3>
+              <p class="text-center f_size-4 my-3">Downloadable worksheets <br> for you to try writing <br> Baybayin
+                characters <br> manually</p>
+            </div>
+            <a class="card__item-link" href="#">Download</a>
+          </div>
+
+        </section>
+      </div>
+    </div>
+    <footer class="main__footer">
+      <div class="d-flex align-items-center justify-content-center">
+        <p class="text-center m-0">Baybayin E-Learing System Made by Computer Science Students <br>
+          from <strong>Laguna State Polytechnic University - San Pablo City</strong>
+        </p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+    <script  src="{{url_for('static',filename='component-js/landing-page.js' )}}" ></script>
+    <script  src="{{url_for('static',filename='component-js/learning-module-2.js' )}}" ></script>
+    <script  src="{{url_for('static',filename='component-js/learning-module' )}}" ></script>
+    <script  src="{{url_for('static',filename='component-js/translator.js' )}}" ></script>
+    <script  src="{{url_for('static',filename='component-js/query_method.js' )}}" ></script>
+  </body>
+
+</html>

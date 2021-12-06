@@ -1,0 +1,70 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+@mixin a_link($color: #000, $weight: $fw_400) {
+  color: $color;
+  font-weight: $weight;
+  text-decoration: none;
+}
+
+// PRIMARY A LINK
+@mixin primary__a-link {
+  @include a_link($color: $white);
+  background-color: $primary-color;
+  border-radius: 100px;
+  font-weight: $fw_600;
+  padding:$spacing-3 $spacing-7;
+
+  &:hover {
+    background-color: $primary-color-alpha;
+    transition: all .4s;
+  }
+}
+
+// PICTURE POSITION
+@mixin asset_position($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// LEARN MORE LINK
+@mixin secondary__a-link {
+  @include a_link($color: $primary-color, $weight: $fw_500);
+  background-color: $secondary-color;
+}
+
+
+
+
+$primary-font: "Poppins", sans-serif;
+$secondary-font: 'Averia Serif Libre', cursive;
+$primary-color: #5563f2;
+$primary-color-alpha: #2934aaea;
+$secondary-color: #fedefb;
+$gray_light: #F4F4F4;
+$black: #000;
+$white: #fff;
+$fw_900: 900;
+$fw_800: 800;
+$fw_700: 700;
+$fw_600: 600;
+$fw_500: 500;
+$fw_400: 400;
+$fw_300: 300;
+$fw_200: 200;
+$fw_100: 100;
+$spacing-1: 0.2rem;
+$spacing-2: 0.4rem;
+$spacing-3: 0.6rem;
+$spacing-4: 0.8rem;
+$spacing-5: 1rem;
+$spacing-6: 2rem;
+$spacing-7: 3rem;
+$f_size-1: $spacing-1;
+$f_size-2: $spacing-2;
+$f_size-3: $spacing-3;
+$f_size-4: $spacing-4;
+$f_size-5: $spacing-5;
